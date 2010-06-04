@@ -1,7 +1,7 @@
 ;;; emms-get-lyrics.el --- Get the lyrics of the song emms is currently playing
 
 ;; Copyright (C) 2007 Jay Belanger
-;; Copyright (C) 2010 Marcos Talau
+;; Copyright (C) 2010 Marcos Talau (talau@users.sourceforge.net)
 
 ;; emms-get-lyrics.el is free software; you can redistribute it and/or 
 ;; modify it under the terms of the GNU General Public License as 
