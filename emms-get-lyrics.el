@@ -35,7 +35,6 @@
 
 (defvar emms-get-lyrics-use-files t)
 (defvar emms-get-lyrics-dir nil)
-(defvar emms-get-lyrics-match-lyric-found "From LyricWiki")
 (defvar emms-get-lyrics-match-lyric-notfound "This page needs content.")
 (defvar emms-get-lyrics-match-ad-top "Ringtone to your Cell phone")
 (defvar emms-get-lyrics-match-ad-bottom "Ringtone to your Cell phone")
@@ -97,10 +96,8 @@
              (set-buffer buffer)
              (funcall fn (emms-get-lyrics-url artist title) buffer)
              (goto-char (point-min))
-             (if (and
-                  (search-forward emms-get-lyrics-match-lyric-found nil t)
-                  (not (search-forward 
-                        emms-get-lyrics-match-lyric-notfound nil t)))
+             (if (not (search-forward 
+                        emms-get-lyrics-match-lyric-notfound nil t))
 		 ; where lyrics from?
                  (let ((frominsert
                         (save-excursion
